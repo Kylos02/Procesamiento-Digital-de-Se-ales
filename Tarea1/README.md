@@ -1,1 +1,46 @@
-📂 DSP_Assignment_01: Discrete-Time Signal AnalysisAuthors: Angel Pozos & Andrés SilverioCourse: Digital Signal Processing (2026-2)🚀 Project OverviewThis repository contains the computational implementation and theoretical verification of Discrete-Time (DT) signals. The main goal was to bridge the gap between analytical "pen-and-paper" exercises and algorithmic execution using Python, ensuring a deep understanding of signal manipulation.🛠️ Technical ImplementationUnlike standard implementations, this project emphasizes low-level logic:Manual Algorithms: Correlation and signal shifts were developed using nested loops and basic indexing to avoid high-level "black-box" functions like np.convolve or np.correlate.Signal Synthesis: Generation of fundamental sequences: Unit Impulse ($\delta[n]$), Unit Step ($u[n]$), and Unit Ramp ($r[n]$).Characterization: Precise calculation of Energy ($E_x$), Average Power ($P_x$), Mean, and RMS values for various sequences.🧪 Key Lab TopicsSampling & Aliasing: Practical demonstration of the Nyquist-Shannon theorem and how frequency folding occurs when $f_s < 2f_{max}$.Signal Periodicity: Mathematical and visual determination of fundamental periods ($N$) in sinusoidal sequences.Correlation Analysis: Comparative study between Autocorrelation (signal symmetry) and Cross-correlation (similarity between different sequences).💻 StackLanguage: Python 3.xEnvironment: Jupyter NotebookCore Libraries: NumPy (array handling), Matplotlib (signal visualization).📝 How to useClone the repository.Open PozosSilverio_Tarea1.ipynb in Jupyter or VS Code.
+# ⚡ DSP: Discrete-Time Operations (Assignment 1)
+
+**Collaborators:** Angel Pozos & Andrés Silverio  
+**Semester:** 2026-2 | **Field:** Digital Signal Processing
+
+---
+
+### 🎯 Project Mission
+The objective of this assignment was to transition from theoretical paper-based analysis to digital signal manipulation. We focused on the algorithmic implementation of fundamental discrete operations without relying on high-level libraries for the core logic.
+
+---
+
+### 🛠️ Technical Highlights
+
+#### 🔹 Low-Level Logic (The "No-Shortcuts" Rule)
+To ensure a deep understanding of DSP, we avoided using built-in functions like `np.convolve` or `np.correlate`. Instead, we developed:
+* **Custom Correlation:** Manual nested loops to compute Autocorrelation and Cross-correlation.
+* **Signal Synthesis:** Mathematical generation of $\delta[n]$, $u[n]$, and $r[n]$.
+* **Manual Shifting:** Implementing $x[n-k]$ and $x[-n]$ through index manipulation.
+
+#### 🔹 Theoretical Verification
+We solved and then digitally verified several key concepts:
+* **Energy vs. Power:** Classification of signals based on $E_x$ and $P_x$ convergence.
+* **The Nyquist Challenge:** Analysis of the **Aliasing effect** when $f_s < 2f_{max}$ through computational plotting.
+* **Signal Stats:** Calculation of Mean, Energy, and RMS values.
+
+---
+
+### 📊 Key Results Captured
+* **Fundamental Period ($N$):** Verified for sinusoidal sequences (e.g., $N=12$).
+* **Energy Analysis:** Computed $E_x \approx 5.263$ for decaying exponential signals.
+* **Symmetry:** Proved that the autocorrelation of a symmetric signal remains symmetric.
+
+---
+
+### ⚙️ Tech Stack
+* **Kernel:** Python 3.10+
+* **Environment:** Jupyter Notebook / Google Colab
+* **Dependencies:** `NumPy` & `Matplotlib`
+
+---
+
+### 📖 How to Run
+1. Ensure you have the `.ipynb` and the `.pdf` (theory) in the same directory.
+2. Open the notebook and run all cells.
+3. Compare the generated graphs with the theoretical results provided in the PDF.
